@@ -3,9 +3,8 @@ import setupReadline from './readline.js';
 const isPalindromo = (palabra) => {
 
     palabra = palabra.toLowerCase().replaceAll(' ', '');
-
-    const palabraInvertida = palabra.split('').reverse().join('');
-    return palabra === palabraInvertida;
+    
+    return palabra === palabra.split('').reverse().join('');
 }
 
 const verificarPalindromo = () => {
