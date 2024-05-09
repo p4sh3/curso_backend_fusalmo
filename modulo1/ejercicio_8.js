@@ -1,11 +1,10 @@
 import setupReadline from './readline.js';
 
 const isPalindromo = (palabra) => {
-  palabra.replace
+
     palabra = palabra.toLowerCase().replaceAll(' ', '');
 
     const palabraInvertida = palabra.split('').reverse().join('');
-
     return palabra === palabraInvertida;
 }
 
