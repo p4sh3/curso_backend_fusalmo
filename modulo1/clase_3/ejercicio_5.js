@@ -1,4 +1,5 @@
 import { mainPrompt } from "./index.js";
+
 const COLORES_PRIMARIOS  = ["rojo","amarillo","azul"];
 const COMBINACIONES = {
   "verde": [COLORES_PRIMARIOS[2], COLORES_PRIMARIOS[1]],

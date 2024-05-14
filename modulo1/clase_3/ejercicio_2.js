@@ -17,8 +17,7 @@ const evaluarNumeros = (numero1, numero2, numero3) => {
 export const promptEjercicio2 = rl => {
   
   const numeros = []
-
-
+  
   rl.question("Ingresa el primer número: ", (numero) => {
     numeros.push(validarEntradaNumerica(numero));
     rl.question("Ingresa el segundo número: ", (numero) => {

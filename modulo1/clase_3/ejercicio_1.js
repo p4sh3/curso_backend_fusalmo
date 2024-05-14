@@ -8,11 +8,11 @@ import { mainPrompt } from "./index.js";
 
 const analizarNumero = numero => {
   if (numero === 0) {
-    return console.log(`El número es 0`);
+    console.log(`El número es 0`);
   } else if (numero < 0){
-    return console.log(`El número es negativo`);
+    console.log(`El número es negativo`);
   } else {
-    return console.log(`El número es positivo`);
+    console.log(`El número es positivo`);
   }
 }
 

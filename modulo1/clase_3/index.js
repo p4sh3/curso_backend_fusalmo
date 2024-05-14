@@ -9,15 +9,12 @@ import { promptEjercicio7 } from "./ejercicio_7.js";
 
 const rl = setupReadline();
 
-
-
 export const mainPrompt = () => {
-
+  
   console.log("\n_____________________________")
   console.log("1-Ejercicio 1\n2-Ejercicio 2\n3-Ejercicio 3\n4-Ejercicio 4\n5-Ejercicio 5\n6-Ejercicio 6\n7-Ejercicio 7");
   console.log("_____________________________");
   rl.question('\nIngresa una opción: ', (opcion) => {
-
     switch (opcion){
 
       case "1":

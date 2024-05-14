@@ -1,5 +1,6 @@
 import { validarEntradaNumerica } from "../utils.js";
 import { mainPrompt } from "./index.js";
+
 const esParImpar = numero => {
   return !(numero % 2) ? `El número ${numero} es par` : `El número ${numero} es impar`;
 }
