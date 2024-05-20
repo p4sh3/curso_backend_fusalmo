@@ -89,12 +89,13 @@ export const deleteNotes = async () => {
   let deletedNotes = 0;
   const indexes = await notesCheck("Seleccione la nota que desea eliminar");
 
-  if(!indexes){
+  if(!indexes.length){
     console.log(chalk.red.inverse("No se seleccionó ninguna nota\n"));
     return ;
   }
 
   for(let index of indexes){
+
     notas.splice((index - deletedNotes), 1)
     deletedNotes += 1;
     
