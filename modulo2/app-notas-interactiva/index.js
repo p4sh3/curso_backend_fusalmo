@@ -56,7 +56,7 @@ const mainPrompt = async () => {
         break;   
 
       case "delete":
-        console.clear();-
+        console.clear();
         await deleteNotes();
         break;  
 
@@ -66,7 +66,4 @@ const mainPrompt = async () => {
   }
 }
 
-
-
-console.log("ESTE ES EL NUEVO CAMBIO")
 mainPrompt();
