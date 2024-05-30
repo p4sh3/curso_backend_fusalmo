@@ -9,12 +9,12 @@ app.use(express.json());
 const tasks = [];
 
 
-app.get("/tasks", (req, res) => {
+app.get("/movies", (req, res) => {
   res.json(tasks);
 })
 
 
-app.post("/tasks", (req, res) => {
+app.post("/movies", (req, res) => {
   const newTask = {
     id: tasks.length+1,
     title: req.body.title,
@@ -25,7 +25,7 @@ app.post("/tasks", (req, res) => {
   res.status(201).json(newTask)
 })
 
-app.get("/tasks/:id", (req, res) => {
+app.get("/movies/:id", (req, res) => {
   const taskId = parseInt(req.params.id)
   const task = tasks.find(task => task.id === taskId)
 
@@ -36,7 +36,7 @@ app.get("/tasks/:id", (req, res) => {
   }
 })
 
-app.put("/tasks/:id", (req, res) => {
+app.put("/movies/:id", (req, res) => {
   const taskId = parseInt(req.params.id)
   const task = tasks.find(task => task.id === taskId)
 
@@ -51,8 +51,22 @@ app.put("/tasks/:id", (req, res) => {
   }
 })
 
+app.patch("/movies/:id", (req, res) => {
+  const taskId = parseInt(req.params.id)
+  const task = tasks.find(task => task.id === taskId)
 
-app.delete("/tasks/:id", (req, res) => {
+  if (task) {
+    task.title = req.body.title ?? task.title,
+    task.completed = req.body.completed ?? task.completed
+
+    res.json(task)
+
+  } else {
+    res.status(404).send("No se actualizó la tarea")
+  }
+})
+
+app.delete("/movies/:id", (req, res) => {
   const taskId = parseInt(req.params.id)
   const taskIndex = tasks.findIndex(task => task.id === taskId)
 
